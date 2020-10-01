@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4d032fc-f5ce-4f82-94c8-d095ded7b79f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_4_8_complete.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scanner.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antlr-4.8-complete.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compi_semana5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/MyParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/generated/Scanner.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/generated/Scanner.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/generated/Scanner.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MyParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generated/Scanner.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generated/Scanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generated/Scanner.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iHVEKOjOMPfryKSutlAZiWQaF2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
+      <module name="compi_semana5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4d032fc-f5ce-4f82-94c8-d095ded7b79f" name="Default Changelist" comment="" />
+      <created>1601564392748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601564392748</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1601565024458">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601565024458" />
+    <state x="188" y="185" key="FileChooserDialogImpl" timestamp="1601564645253">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="188" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601564645253" />
+    <state width="1557" height="203" key="GridCell.Tab.0.bottom" timestamp="1601592454096">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="203" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601592454096" />
+    <state width="1557" height="203" key="GridCell.Tab.0.center" timestamp="1601592454096">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="203" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601592454096" />
+    <state width="1557" height="203" key="GridCell.Tab.0.left" timestamp="1601592454095">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="203" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601592454095" />
+    <state width="1557" height="203" key="GridCell.Tab.0.right" timestamp="1601592454096">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="203" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601592454096" />
+    <state width="756" height="257" key="GridCell.Tab.1.bottom" timestamp="1601569452038">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="756" height="257" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601569452038" />
+    <state width="756" height="257" key="GridCell.Tab.1.center" timestamp="1601569452038">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="756" height="257" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1601569452038" />
+    <state width="756" height="257" key="GridCell.Tab.1.left" timestamp="1601569452038">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="756" height="257" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1601569452038" />
+    <state width="756" height="257" key="GridCell.Tab.1.right" timestamp="1601569452038">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="756" height="257" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1601569452038" />
+    <state x="476" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1601589687492">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="476" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1601589687492" />
+  </component>
+  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+    <option name="sizePresets">
+      <list>
+        <SizePreset>
+          <option name="caption" value="Phone" />
+          <option name="height" value="568" />
+          <option name="width" value="320" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Tablet" />
+          <option name="height" value="1024" />
+          <option name="width" value="768" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Desktop" />
+          <option name="height" value="900" />
+          <option name="width" value="1440" />
+        </SizePreset>
+      </list>
+    </option>
+  </component>
+</project>
