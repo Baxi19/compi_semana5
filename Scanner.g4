@@ -68,7 +68,6 @@ LITERAL
 
 //--------------------------------------------------------------
 // skiped words
-
 WS              : [ \r\t\n]+                -> skip ;
 BLOCK_COMMENT   : '/*' .*? '*/'             -> skip;
 COMMENT    : '//' ~[\r\n]* '\r'? '\n'       -> skip ;

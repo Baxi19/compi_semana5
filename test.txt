@@ -1,5 +1,12 @@
-/* 848484*/
+/*          Comentary Example            */
 
-//line
 
-x := 1
+//Vars type
+let
+    var factorial   : int;
+    var numero      : int;
+    var i           : int
+in
+begin
+    cons := y 8
+end

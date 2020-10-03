@@ -2,27 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4d032fc-f5ce-4f82-94c8-d095ded7b79f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_4_8_complete.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scanner.g4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/antlr-4.8-complete.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compi_semana5.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/MyParser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/generated/Scanner.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/generated/Scanner.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/generated/Scanner.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/compi_semana5/main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generated/Scanner.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generated/Scanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/generated/Scanner.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AlphaErrorListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scanner.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Scanner.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/MyParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/MyParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +39,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Tarea1Compiladores_fabian_zamora/Tarea1Compiladores" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
@@ -90,26 +77,34 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601565024458" />
-    <state x="188" y="185" key="FileChooserDialogImpl" timestamp="1601564645253">
+    <state x="52" y="0" key="CommitChangelistDialog2" timestamp="1601594179111">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="188" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601564645253" />
-    <state width="1557" height="203" key="GridCell.Tab.0.bottom" timestamp="1601592454096">
+    <state x="52" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1601594179111" />
+    <state x="188" y="185" key="FileChooserDialogImpl" timestamp="1601708349529">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601592454096" />
-    <state width="1557" height="203" key="GridCell.Tab.0.center" timestamp="1601592454096">
+    <state x="188" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601708349529" />
+    <state width="1557" height="202" key="GridCell.Tab.0.bottom" timestamp="1601709448713">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601592454096" />
-    <state width="1557" height="203" key="GridCell.Tab.0.left" timestamp="1601592454095">
+    <state width="1557" height="202" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601709448713" />
+    <state width="756" height="203" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601594380905" />
+    <state width="1557" height="202" key="GridCell.Tab.0.center" timestamp="1601709448711">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601592454095" />
-    <state width="1557" height="203" key="GridCell.Tab.0.right" timestamp="1601592454096">
+    <state width="1557" height="202" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601709448711" />
+    <state width="756" height="203" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601594380905" />
+    <state width="1557" height="202" key="GridCell.Tab.0.left" timestamp="1601709448710">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601592454096" />
+    <state width="1557" height="202" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601709448710" />
+    <state width="756" height="203" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601594380905" />
+    <state width="1557" height="202" key="GridCell.Tab.0.right" timestamp="1601709448712">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="202" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601709448712" />
+    <state width="756" height="203" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601594380905" />
     <state width="756" height="257" key="GridCell.Tab.1.bottom" timestamp="1601569452038">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -126,9 +121,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="756" height="257" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1601569452038" />
-    <state x="476" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1601589687492">
+    <state x="476" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1601708063705">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="476" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601708063705" />
     <state x="476" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1601589687492" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
