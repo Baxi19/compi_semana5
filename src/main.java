@@ -6,7 +6,6 @@ import org.antlr.v4.runtime.CharStreams;
 import javax.swing.*;
 
 public class main {
-
     public static void main(String[] args) {
         Scanner inst = null;
         CharStream input = null;
@@ -16,15 +15,24 @@ public class main {
             MyParser p = new MyParser(inst);
             try {
                 p.parse();
+                //Show Parser Errors
                 int size = p.errors.size();
-                //Show Sintax Errors
-                for (int i = 0; i < size; i++) {
-                    System.out.println("Sintaxis => " +  p.errors.get(i));
+                if(size > 0){
+                    System.out.println("Compilation: Failed");
+                    for (int i = 0; i < size; i++) {
+                        System.out.println((i+1) +") " +  p.errors.get(i));
+                    }
                 }
-                System.out.println("Compilacion Terminada");
+                else{
+                    System.out.println("Compilation: Successful");
+                }
+
             }catch (Exception e){
-                System.out.println("Error al compilar: " + e);
+                System.out.println("Compilation: Failed => " + e);
             };
-        }catch(Exception e){System.out.println("No hay archivo");e.printStackTrace();}
+        }catch(Exception e){
+            System.out.println("The file doesn't exist!");
+            e.printStackTrace();
+        }
     }
 }

@@ -1,6 +1,5 @@
 /*          Comentary Example            */
 
-
 //Vars type
 let
     var factorial   : int;
