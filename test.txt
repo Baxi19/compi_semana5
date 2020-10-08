@@ -1,11 +1,18 @@
-/*          Comentary Example            */
-
-//Vars type
 let
-    var factorial   : int;
-    var numero      : int;
-    var i           : int
+  var num : Int;
+  var a : Int;
+  var b : Int;
+  var temp : Int
 in
 begin
-    cons := y 8
+  num := 5;
+  a := 1;
+  b := 0;
+  while (num) do
+  begin
+    temp := a;
+    a := a + b - c * 2 / 5;
+    b := temp + a;
+    num := num - 1
+  end
 end

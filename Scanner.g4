@@ -41,30 +41,32 @@ VAR         : 'var' ;
 
 //--------------------------------------------------------------
 //Others Regular expressions
-INTEGER: [1-9][0-9]* | ZERO;
+//INTEGER: [1-9][0-9]* | ZERO;
 
 fragment ZERO
     : [0]
-    ;
-
-fragment DIGIT
-    : [0-9]
     ;
 
 //--------------------------------------------------------------
 // Letter
 IDENT : LETTER(LETTER|DIGIT)*;
 
-
-// fragment LETTER : 'a'..'z' | 'A'..'Z';
-fragment LETTER
-    : [a-z]
-    ;
-
 // fragment DIGIT : '0'..'9';
 LITERAL
     : DIGIT DIGIT*
     ;
+
+// fragment LETTER : 'a'..'z' | 'A'..'Z';
+fragment LETTER
+    : [a-zA-Z]
+    ;
+
+
+fragment DIGIT
+    : [0-9]
+    ;
+
+
 
 //--------------------------------------------------------------
 // skiped words
