@@ -1,3 +1,4 @@
+x:=3;
 let
   var num : Int;
   var a : Int;

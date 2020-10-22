@@ -1,5 +1,7 @@
+import ast.*;
 import generated.Scanner;
 import org.antlr.v4.runtime.CommonToken;
+import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.ArrayList;
 
@@ -32,35 +34,48 @@ public class MyParser {
         tokenActual = ( CommonToken ) scanner.nextToken();
     }
 
-    public void parse(){
+    public AST parse(){
         tokenActual = ( CommonToken ) scanner.nextToken();
-        parseProgram();
+        ProgramAST raiz = parseProgram();
+        return raiz;
     }
 
     //Alpha Grammar
-    private void parseProgram(){
-        parseSingleCommand();
+    private ProgramAST parseProgram(){
+        ProgramAST ctx;
+        SingleCommandAST singleCommand = parseSingleCommand();
+        ctx = new ProgramAST(singleCommand);
+        return ctx;
     }
 
-    private void parseCommand(){
-        parseSingleCommand();
+    private CommandAST parseCommand(){
+        CommandAST ctx;
+        SingleCommandAST sc1 = parseSingleCommand();
+        ctx = new CommandAST(sc1);
+
         while (tokenActual.getType() == Scanner.PyCOMMA){
             accepIt();
-            parseSingleCommand();
+            SingleCommandAST scAux = parseSingleCommand();
+            ctx.getSingleCommandList().add(scAux);
         }
+        return  ctx;
     }
 
-    private void parseSingleCommand(){
+    private SingleCommandAST parseSingleCommand(){
+        SingleCommandAST ctx = null;
         //Identifier
         if(tokenActual.getType() == Scanner.IDENT){
+            CommonToken id = tokenActual;
             accepIt();
             if(tokenActual.getType() == Scanner.ASSING){
                 accepIt();
-                parseExpression();
+                ExpressionAST expression = parseExpression();
+                ctx = new AssingSingleCommandAST(id, expression);
             }else if(tokenActual.getType() == Scanner.L_PARENT){
                 accepIt();
-                parseExpression();
+                ExpressionAST expression = parseExpression();
                 accept(Scanner.R_PARENT);
+                ctx = new CallSingleCommandAST(id, expression);
             }else{
                 errors.add("Error (" +tokenActual.getLine()+", "+ tokenActual.getCharPositionInLine()  +"): " +
                                     " Se que venga [ASSING, L_PARENT] pero viene : " + tokenActual.getText());
@@ -102,6 +117,7 @@ public class MyParser {
                     " Se que venga [ID, IF, WHILE, LET, BEGIN] pero viene : " + tokenActual.getText());
 
         }
+        return ctx;
     }
 
     private void parseDeclaration(){
@@ -136,12 +152,14 @@ public class MyParser {
         }
     }
 
-    private void parseExpression(){
+    private ExpressionAST parseExpression(){
         parsePrimaryExpression();
         while (checkOperator(tokenActual.getText())){
             accepIt();
             parsePrimaryExpression();
         }
+        //TODO: Hecer el metodo
+        return null;
     }
 
     private Boolean checkOperator(String operator){
@@ -157,7 +175,7 @@ public class MyParser {
             case "<":
             case ">":
             case "/":
-                System.out.println(operator);
+                //System.out.println(operator);
                 return true;
         }
         return false;

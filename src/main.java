@@ -1,3 +1,5 @@
+import ast.AST;
+import ast.ProgramAST;
 import generated.Scanner;
 import org.antlr.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.CharStream;
@@ -14,7 +16,10 @@ public class main {
             inst = new generated.Scanner(input);
             MyParser p = new MyParser(inst);
             try {
-                p.parse();
+                AST raiz = p.parse();
+                PrintAST print = new PrintAST();
+                raiz.visit(print);
+
                 //Show Parser Errors
                 int size = p.errors.size();
                 if(size > 0){
