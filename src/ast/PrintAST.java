@@ -38,7 +38,7 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitAssingSC(AssingSCAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        //System.out.println(ctx.ID.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+"=> " +ctx.ID.getText());
         cantTabs++;
         ctx.expression.visit(this);
         cantTabs--;
@@ -48,9 +48,7 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitCallFunSC(CallFunSCAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        //System.out.println(ctx.IDENT.getText() + "\n");
-        //System.out.println(ctx.PDER.getText() + "\n");
-        //System.out.println(ctx.PDER.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+ "=> "+ctx.IDENT.getText() + "()");
         cantTabs++;
         ctx.expression.visit(this);
         cantTabs--;
@@ -60,14 +58,15 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitIfSC(IfSCAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
+        System.out.println(printTabs(cantTabs)+"=> if " );
         cantTabs++;
         ctx.expression.visit(this);
         cantTabs--;
-        //System.out.println(ctx.THEN.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+"=> " +ctx.THEN.getText());
         cantTabs++;
         ctx.singleCommand1.visit(this);
         cantTabs--;
-        //System.out.println(ctx.ELSE.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+"=> " + ctx.ELSE.getText() );
         cantTabs++;
         ctx.singleCommand2.visit(this);
         cantTabs--;
@@ -77,10 +76,11 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitWhileSC(WhileSCAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
+        System.out.println(printTabs(cantTabs)+"=> while");
         cantTabs++;
         ctx.expression.visit(this);
         cantTabs--;
-        //System.out.println(ctx.DO.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+"=> "+ctx.DO.getText());
         cantTabs++;
         ctx.singleCommand.visit(this);
         cantTabs--;
@@ -90,10 +90,11 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitLetSC(LetSCAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
+        System.out.println(printTabs(cantTabs)+"=> "+"let");
         cantTabs++;
         ctx.declaration.visit(this);
         cantTabs--;
-        //System.out.println(ctx.IN.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+"=> "+ctx.IN.getText());
         cantTabs++;
         ctx.singleCommand.visit(this);
         cantTabs--;
@@ -103,10 +104,11 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitBeginSC(BeginSCAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
+        System.out.println(printTabs(cantTabs)+"=> begin");
         cantTabs++;
         ctx.command.visit(this);
         cantTabs--;
-        //System.out.println(ctx.END.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+"=> "+ctx.END.getText());
         return null;
     }
 
@@ -128,9 +130,7 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitConstSingleDeclaration(ConstSingleDeclarationAST ctx){
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        //System.out.println(ctx.CONST.getText() + "\n");
-        //System.out.println(ctx.IDENT.getText() + "\n");
-        //System.out.println(ctx.VIR.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+"=> "+ctx.CONST.getText() + " "+ctx.IDENT.getText() + " "+ctx.VIR.getText());
         cantTabs++;
         ctx.expression.visit(this);
         cantTabs--;
@@ -141,10 +141,7 @@ public class PrintAST implements Visitor {
     public Object visitVarSingleDeclaration(VarSingleDeclarationAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
         System.out.println(printTabs(cantTabs) + "=> "+ctx.VAR.getText() + " " + ctx.IDENT1.getText() + " " + ctx.DOSPUN.getText() + " " + ctx.IDENT2.getText());
-        //System.out.println(ctx.IDENT1.getText() + "\n");
-        //System.out.println(ctx.DOSPUN.getText() + "\n");
-        //System.out.println(ctx.IDENT2.getText() + "\n");
-         return null;
+        return null;
     }
 
     @Override
@@ -167,14 +164,14 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitNumPrimaryExpression(NumPrimaryExpressionAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        System.out.println(printTabs(cantTabs)+ "=> " +ctx.NUM.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+ "=> " +ctx.NUM.getText());
         return null;
     }
 
     @Override
     public Object visitIdentPrimaryExpression(IdentPrimaryExpressionAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        System.out.println(printTabs(cantTabs)+ "=> " +ctx.IDENT.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+ "=> " +ctx.IDENT.getText());
         return null;
     }
 
@@ -192,28 +189,28 @@ public class PrintAST implements Visitor {
     @Override
     public Object visitSumOperator(SumOperatorAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        System.out.println(printTabs(cantTabs)+ "=> " +ctx.SUM.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+ "=> " +ctx.SUM.getText());
         return null;
     }
 
     @Override
     public Object visitSubOperator(SubOperatorAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        System.out.println(printTabs(cantTabs)+ "=> " +ctx.SUB.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+ "=> " +ctx.SUB.getText());
         return null;
     }
 
     @Override
     public Object visitMulOperator(MulOperatorAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        System.out.println(printTabs(cantTabs)+ "=> " +ctx.MUL.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+ "=> " +ctx.MUL.getText());
         return null;
     }
 
     @Override
     public Object visitDivOperator(DivOperatorAST ctx) {
         System.out.println(printTabs(cantTabs)+ctx.getClass().getSimpleName());
-        System.out.println(printTabs(cantTabs)+ "=> " +ctx.DIV.getText() + "\n");
+        System.out.println(printTabs(cantTabs)+ "=> " +ctx.DIV.getText());
         return null;
     }
 }
