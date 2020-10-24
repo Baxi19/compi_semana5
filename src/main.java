@@ -17,8 +17,8 @@ public class main {
             MyParser p = new MyParser(inst);
             try {
                 AST raiz = p.parse();
-                PrintAST print = new PrintAST();
-                raiz.visit(print);
+                //PrintAST print = new PrintAST();
+                //raiz.visit(print);
 
                 //Show Parser Errors
                 int size = p.errors.size();

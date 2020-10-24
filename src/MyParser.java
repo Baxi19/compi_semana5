@@ -1,7 +1,6 @@
 import ast.*;
 import generated.Scanner;
 import org.antlr.v4.runtime.CommonToken;
-import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.ArrayList;
 
@@ -158,6 +157,7 @@ public class MyParser {
             accepIt();
             parsePrimaryExpression();
         }
+
         //TODO: Hecer el metodo
         return null;
     }
@@ -175,7 +175,6 @@ public class MyParser {
             case "<":
             case ">":
             case "/":
-                //System.out.println(operator);
                 return true;
         }
         return false;

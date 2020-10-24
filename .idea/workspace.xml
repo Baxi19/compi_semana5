@@ -2,20 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4d032fc-f5ce-4f82-94c8-d095ded7b79f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PrintAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/AST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/AssingSingleCommandAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/CallSingleCommandAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/CommandAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/ExpressionAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/PrimaryExpressionAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/ProgramAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/SingleCommandAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/Visitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/BlockSingleCommandAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/ConsSingleDeclarationAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/DeclarationAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/GroupPrimaryExpressionAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/IdPrimaryExpressionAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/IfSingleCommandAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/LetSingleCommandAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/NumPrimaryExpressionAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/OperatorAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/SingleDeclarationAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/TypeDenoterAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/VarSingleDeclarationAST.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ast/WhileSingleCommandAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/MyParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/MyParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrintAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrintAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/AST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/AST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/AssingSingleCommandAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/AssingSingleCommandAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/CallSingleCommandAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/CallSingleCommandAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/CommandAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/CommandAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/ExpressionAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/ExpressionAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/PrimaryExpressionAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/PrimaryExpressionAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/ProgramAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/ProgramAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/SingleCommandAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/SingleCommandAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/Visitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
@@ -87,10 +98,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1603385612530">
+    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1603521475988">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603385612530" />
+    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603521475988" />
     <state x="52" y="0" key="CommitChangelistDialog2" timestamp="1601594179111">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -99,25 +110,25 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="188" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601708349529" />
-    <state width="1557" height="203" key="GridCell.Tab.0.bottom" timestamp="1603386082246">
+    <state width="1557" height="203" key="GridCell.Tab.0.bottom" timestamp="1603522431897">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603386082246" />
+    <state width="1557" height="203" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603522431897" />
     <state width="754" height="203" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
-    <state width="1557" height="203" key="GridCell.Tab.0.center" timestamp="1603386082246">
+    <state width="1557" height="203" key="GridCell.Tab.0.center" timestamp="1603522431896">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603386082246" />
+    <state width="1557" height="203" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603522431896" />
     <state width="754" height="203" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
-    <state width="1557" height="203" key="GridCell.Tab.0.left" timestamp="1603386082246">
+    <state width="1557" height="203" key="GridCell.Tab.0.left" timestamp="1603522431896">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603386082246" />
+    <state width="1557" height="203" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603522431896" />
     <state width="754" height="203" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
-    <state width="1557" height="203" key="GridCell.Tab.0.right" timestamp="1603386082246">
+    <state width="1557" height="203" key="GridCell.Tab.0.right" timestamp="1603522431897">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="203" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603386082246" />
+    <state width="1557" height="203" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603522431897" />
     <state width="754" height="203" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
     <state width="756" height="257" key="GridCell.Tab.1.bottom" timestamp="1601569452038">
       <screen x="0" y="0" width="1600" height="860" />

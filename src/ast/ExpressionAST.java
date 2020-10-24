@@ -4,17 +4,20 @@ import org.antlr.v4.runtime.CommonToken;
 
 import java.util.ArrayList;
 
+//Class ExpressionAST
 public class ExpressionAST extends AST{
     private PrimaryExpressionAST primaryExpression;
-    private ArrayList<PrimaryExpressionAST> primaryExpressionList;
     private ArrayList<CommonToken> operatorList;
+    private ArrayList<PrimaryExpressionAST> primaryExpressionList;
 
+    //Constructor
     public ExpressionAST(PrimaryExpressionAST primaryExpression) {
         this.primaryExpression = primaryExpression;
-        this.primaryExpressionList = new ArrayList<>();
         operatorList = new ArrayList<>();
+        this.primaryExpressionList = new ArrayList<>();
     }
 
+    //Getter
     public PrimaryExpressionAST getPrimaryExpression() {
         return primaryExpression;
     }
@@ -23,13 +26,17 @@ public class ExpressionAST extends AST{
         return primaryExpressionList.get(i);
     }
 
-    public CommonToken getOperator(int i) {
-        return operatorList.get(i);
+    public ArrayList<CommonToken> getOperatorList() {
+        return operatorList;
     }
 
-    //TODO:
+    public ArrayList<PrimaryExpressionAST> getPrimaryExpressionList() {
+        return primaryExpressionList;
+    }
+
+    //AST Method
     @Override
     public Object visit(Visitor visitor) {
-        return null;
+        return visitor.visitExpressionAST(this);
     }
 }

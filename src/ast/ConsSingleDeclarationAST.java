@@ -2,18 +2,18 @@ package ast;
 
 import org.antlr.v4.runtime.CommonToken;
 
-//Class CallSingleCommandAST
-public class CallSingleCommandAST extends SingleCommandAST {
+//Class ConsSingleDeclarationAST
+public class ConsSingleDeclarationAST extends SingleDeclarationAST {
     private CommonToken id;
     private ExpressionAST expression;
 
     //Constructor
-    public CallSingleCommandAST(CommonToken id, ExpressionAST expression) {
+    public ConsSingleDeclarationAST(CommonToken id, ExpressionAST expression) {
         this.id = id;
         this.expression = expression;
     }
 
-    //Getters
+    //Getter
     public CommonToken getId() {
         return id;
     }
@@ -25,7 +25,6 @@ public class CallSingleCommandAST extends SingleCommandAST {
     //AST Method
     @Override
     public Object visit(Visitor visitor) {
-        return visitor.visitCallSingleCommandAST(this);
+        return visitor.visitConsSingleDeclarationAST(this);
     }
-
 }
