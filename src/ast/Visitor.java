@@ -1,5 +1,6 @@
 package ast;
 
+//Class Visitor
 public interface Visitor {
     public Object visitProgram(ProgramAST ctx);
     public Object visitCommand(CommandAST ctx);

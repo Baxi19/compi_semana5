@@ -12,7 +12,6 @@ public class main {
         CharStream input = null;
         CommonTokenStream tokens = null;
         AST tree;
-
         try {
             input = CharStreams.fromFileName("test.txt");
             scanner = new generated.Scanner(input);

@@ -4,11 +4,10 @@ import ast.*;
 import generated.Scanner;
 import org.antlr.v4.runtime.Token;
 
-import java.util.ArrayList;
-
 //Randald Villegas Brenes
 //Compiladores e interpretes
 
+//Class Parser's Manual
 public class Parser {
     private Token tokenActual;
     private Scanner scanner;
@@ -46,39 +45,35 @@ public class Parser {
     }
 
     private CommandAST parseCommand(){
-        CommandAST ctx;
-        SingleCommandAST singleCommand = parseSingleCommand();
-        ctx = new CommandAST(singleCommand);
+        CommandAST ctx = new CommandAST(parseSingleCommand());
         while(tokenActual.getType() == scanner.PyCOMMA){
             ctx.getPyCommas().add(tokenActual);
             acceptIt();
             ctx.getSingleCommands().add(parseSingleCommand());
         }
-        ctx = new CommandAST(singleCommand);
         return ctx;
     }
 
     private SingleCommandAST parseSingleCommand(){
         SingleCommandAST ctx;
         if(tokenActual.getType() == scanner.IDENT){
-            Token IDENT =  tokenActual;
+            Token id =  tokenActual;
             acceptIt();
             Token ASSING  = tokenActual;
             accept(scanner.ASSING);
-            ExpressionAST expression = parseExpression();
-            ctx = new AssingSCAST(IDENT, ASSING, expression );
-        }
-        else if(tokenActual.getType() == scanner.IDENT){
-            Token IDENT = tokenActual;
+            ctx = new AssingSCAST(id, ASSING, parseExpression());
+        //Id
+        }else if(tokenActual.getType() == scanner.IDENT){
+            Token id = tokenActual;
             acceptIt();
             Token PIZQ = tokenActual;
             accept(scanner.L_PARENT);
             ExpressionAST expression = parseExpression();
             Token PDER = tokenActual;
             accept(scanner.R_PARENT);
-            ctx = new CallFunSCAST(IDENT,PIZQ,expression,PDER);
-        }
-        else if(tokenActual.getType() == scanner.IF){
+            ctx = new CallFunSCAST(id,PIZQ,expression,PDER);
+        //If
+        }else if(tokenActual.getType() == scanner.IF){
             Token IF  = tokenActual;
             acceptIt();
             ExpressionAST expression = parseExpression();
@@ -87,10 +82,9 @@ public class Parser {
             SingleCommandAST singleCommand2 = parseSingleCommand();
             Token ELSE  = tokenActual;
             accept(scanner.ELSE);
-            SingleCommandAST singleCommand3 = parseSingleCommand();
-            ctx = new IfSCAST(IF,expression,THEN,singleCommand2,ELSE,singleCommand3);
-        }
-        else if(tokenActual.getType() == scanner.WHILE){
+            ctx = new IfSCAST(IF,expression,THEN,singleCommand2,ELSE,parseSingleCommand());
+        //While
+        }else if(tokenActual.getType() == scanner.WHILE){
             Token WHILE = tokenActual;
             acceptIt();
             ExpressionAST expression = parseExpression();
@@ -98,8 +92,8 @@ public class Parser {
             accept(scanner.DO);
             SingleCommandAST singleCommand2 = parseSingleCommand();
             ctx = new WhileSCAST(WHILE,expression,DO,singleCommand2);
-        }
-        else if(tokenActual.getType() == scanner.LET){
+        //Let
+        }else if(tokenActual.getType() == scanner.LET){
             Token LET  = tokenActual;
             acceptIt();
             DeclarationAST declaration = parseDeclaration();
@@ -107,41 +101,36 @@ public class Parser {
             accept(scanner.IN);
             SingleCommandAST singleCommand2 = parseSingleCommand();
             ctx = new LetSCAST(LET,declaration,IN, singleCommand2);
-        }
-        else if(tokenActual.getType() == scanner.BEGIN){
+        //Begin
+        }else if(tokenActual.getType() == scanner.BEGIN){
             Token BEGIN  = tokenActual;
             acceptIt();
             CommandAST command = parseCommand();
             Token END  = tokenActual;
             accept(scanner.END);
             ctx = new BeginSCAST(BEGIN,command,END);
-        }
-        else{
-            System.out.println("Syntax error: expected: (ident, if,...)") ;
-            System.out.println(tokenActual.getText() + " in line: " + tokenActual.getLine() + " column: " + tokenActual.getCharPositionInLine());
+
+        }else{
+            System.err.println("Error (" + tokenActual.getLine() + "," + tokenActual.getCharPositionInLine() + ")." +
+                    " Se espera " + "[ID, IF, WHILE, LET, BEGIN]" + " pero viene " + tokenActual.getText());
             return null;
         }
         return ctx;
     }
 
     private DeclarationAST parseDeclaration(){
-        DeclarationAST ctx;
-        SingleDeclarationAST singleDeclaration1 = parseSingleDeclaration();
-        ArrayList<Token> pyCommas = new ArrayList<>();
-        ArrayList<SingleDeclarationAST> singleDeclarations = new ArrayList<>();
+        DeclarationAST ctx = new DeclarationAST(parseSingleDeclaration());
         while(tokenActual.getType() == scanner.PyCOMMA){
-            Token PyCOMA = tokenActual;
-            pyCommas.add(PyCOMA);
+            ctx.getPyCommas().add(tokenActual);
             acceptIt();
-            SingleDeclarationAST singleDeclarationN = parseSingleDeclaration();
-            singleDeclarations.add(singleDeclarationN);
+            ctx.getSingleDeclarations().add(parseSingleDeclaration());
         }
-        ctx = new DeclarationAST(singleDeclaration1, pyCommas, singleDeclarations);
         return ctx;
     }
 
     private SingleDeclarationAST parseSingleDeclaration(){
         SingleDeclarationAST ctx;
+        //Const
         if(tokenActual.getType() == scanner.CONST){
             Token CONST = tokenActual;
             acceptIt();
@@ -151,8 +140,8 @@ public class Parser {
             accept(scanner.VIR);
             ExpressionAST expression = parseExpression();
             ctx = new ConstSingleDeclarationAST(CONST, IDENT, VIR, expression);
-        }
-        else if(tokenActual.getType() == scanner.VAR){
+        //Var
+        }else if(tokenActual.getType() == scanner.VAR){
             Token VAR = tokenActual;
             acceptIt();
             Token IDENT1 = tokenActual;
@@ -162,27 +151,21 @@ public class Parser {
             Token IDENT2 = tokenActual;
             accept(scanner.IDENT);
             ctx = new VarSingleDeclarationAST(VAR, IDENT1, DOSPUN, IDENT2);
-        }
-        else{
-            System.out.println("Syntax error: expected 'const','var'");
-            System.out.println(tokenActual.getText() + " at line: " + tokenActual.getLine() + " column: " + tokenActual.getCharPositionInLine());
+
+        }else{
+            System.err.println("Error (" + tokenActual.getLine() + "," + tokenActual.getCharPositionInLine() + ")." +
+                    " Se espera " + "[CONST, VAR]" + " pero viene " + tokenActual.getText());
             return null;
         }
         return ctx;
     }
 
     private ExpressionAST parseExpression(){
-        ExpressionAST ctx;
-        PrimaryExpressionAST primaryExpression = parsePrimaryExpression();
-        ArrayList<OperatorAST> operators = new ArrayList<>();
-        ArrayList<PrimaryExpressionAST> primaryExpressions = new ArrayList<>();
+        ExpressionAST ctx = new ExpressionAST(parsePrimaryExpression());
         while (tokenActual.getType() == scanner.SUM || tokenActual.getType() == scanner.SUB || tokenActual.getType() == scanner.MUL || tokenActual.getType() == scanner.DIV) {
-            OperatorAST operator = parseOperator();
-            operators.add(operator);
-            PrimaryExpressionAST primaryExpressionN = parsePrimaryExpression();
-            primaryExpressions.add(primaryExpressionN);
+            ctx.getOperators().add(parseOperator());
+            ctx.getPrimaryExpressions().add(parsePrimaryExpression());
         }
-        ctx = new ExpressionAST(primaryExpression, operators, primaryExpressions);
         return ctx;
     }
 
@@ -191,22 +174,22 @@ public class Parser {
         if(tokenActual.getType()== scanner.LITERAL){
             ctx = new NumPrimaryExpressionAST(tokenActual);
             acceptIt();
-        }
-        else if(tokenActual.getType()== scanner.IDENT){
+
+        }else if(tokenActual.getType()== scanner.IDENT){
             ctx = new IdentPrimaryExpressionAST(tokenActual);
             acceptIt();
-        }
-        else if(tokenActual.getType() == scanner.L_PARENT){
+
+        }else if(tokenActual.getType() == scanner.L_PARENT){
             Token PIZQ = tokenActual;
             acceptIt();
             ExpressionAST expression = parseExpression();
             Token PDER = tokenActual;
             accept(scanner.R_PARENT);
             ctx = new GroupPrimaryExpressionAST(PIZQ, expression, PDER);
-        }
-        else{
-            System.out.println("Syntax error: expected 'NUM','IDENT','('");
-            System.out.println(tokenActual.getText() + " at line: " + tokenActual.getLine() + " column: " + tokenActual.getCharPositionInLine());
+
+        }else{
+            System.err.println("Error (" + tokenActual.getLine() + "," + tokenActual.getCharPositionInLine() + ")." +
+                    " Se espera " + "[LIT, ID, PIZQ]" + " pero viene " + tokenActual.getText());
             return null;
         }
         return ctx;
@@ -231,8 +214,8 @@ public class Parser {
             acceptIt();
         }
         else{
-            System.out.println("Syntax error: expected '+','-','*','/'");
-            System.out.println(tokenActual.getText() + " at line: " + tokenActual.getLine() + " column: " + tokenActual.getCharPositionInLine());
+            System.err.println("Error (" + tokenActual.getLine() + "," + tokenActual.getCharPositionInLine() + ")." +
+                    " Se espera " + "['+','-','*','/']" + " pero viene " + tokenActual.getText());
             return null;
         }
         return ctx;

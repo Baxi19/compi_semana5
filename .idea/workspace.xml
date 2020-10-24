@@ -2,76 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4d032fc-f5ce-4f82-94c8-d095ded7b79f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/AssingSCAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/BeginSCAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/CallFunSCAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/ConstSingleDeclarationAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/DivOperatorAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/IdentPrimaryExpressionAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/IfSCAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/LetSCAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/MulOperatorAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/PrintAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/SubOperatorAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/SumOperatorAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ast/WhileSCAST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parser/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/AlphaErrorListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/MyParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/PrintAST.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/AST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/AST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/AssingSingleCommandAST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/BlockSingleCommandAST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/CallSingleCommandAST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/CommandAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/CommandAST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/ConsSingleDeclarationAST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/AssingSCAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/AssingSCAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/BeginSCAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/BeginSCAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/CallFunSCAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/CallFunSCAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/ConstSingleDeclarationAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/ConstSingleDeclarationAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/DeclarationAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/DeclarationAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/DivOperatorAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/DivOperatorAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/ExpressionAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/ExpressionAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/GroupPrimaryExpressionAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/GroupPrimaryExpressionAST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/IdPrimaryExpressionAST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/IfSingleCommandAST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/LetSingleCommandAST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/IdentPrimaryExpressionAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/IdentPrimaryExpressionAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/IfSCAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/IfSCAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/LetSCAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/LetSCAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/MulOperatorAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/MulOperatorAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/NumPrimaryExpressionAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/NumPrimaryExpressionAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/OperatorAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/OperatorAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/PrimaryExpressionAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/PrimaryExpressionAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/PrintAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/PrintAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/ProgramAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/ProgramAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/SingleCommandAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/SingleCommandAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/SingleDeclarationAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/SingleDeclarationAST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/TypeDenoterAST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/SubOperatorAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/SubOperatorAST.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/SumOperatorAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/SumOperatorAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/VarSingleDeclarationAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/VarSingleDeclarationAST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/Visitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/WhileSingleCommandAST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/ast/WhileSCAST.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/ast/WhileSCAST.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AlphaErrorListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrintAST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/compi_semana5/parser/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/compi_semana5/parser/Parser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/AST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/AST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/AssingSingleCommandAST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/BlockSingleCommandAST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/CallSingleCommandAST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/CommandAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/CommandAST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/ConsSingleDeclarationAST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/AssingSCAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/AssingSCAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/BeginSCAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/BeginSCAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/CallFunSCAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/CallFunSCAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/ConstSingleDeclarationAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/ConstSingleDeclarationAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/DeclarationAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/DeclarationAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/DivOperatorAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/DivOperatorAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/ExpressionAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/ExpressionAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/GroupPrimaryExpressionAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/GroupPrimaryExpressionAST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/IdPrimaryExpressionAST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/IfSingleCommandAST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/LetSingleCommandAST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/IdentPrimaryExpressionAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/IdentPrimaryExpressionAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/IfSCAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/IfSCAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/LetSCAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/LetSCAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/MulOperatorAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/MulOperatorAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/NumPrimaryExpressionAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/NumPrimaryExpressionAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/OperatorAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/OperatorAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/PrimaryExpressionAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/PrimaryExpressionAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/PrintAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/PrintAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/ProgramAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/ProgramAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/SingleCommandAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/SingleCommandAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/SingleDeclarationAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/SingleDeclarationAST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/TypeDenoterAST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/SubOperatorAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/SubOperatorAST.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/SumOperatorAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/SumOperatorAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/VarSingleDeclarationAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/VarSingleDeclarationAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ast/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ast/WhileSingleCommandAST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/WhileSCAST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ast/WhileSCAST.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/parser/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,10 +128,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1603568638569">
+    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser" timestamp="1603571623472">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603568638569" />
+    <state x="205" y="149" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603571623472" />
     <state x="530" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603565362690">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -160,25 +144,25 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="188" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601708349529" />
-    <state width="1557" height="262" key="GridCell.Tab.0.bottom" timestamp="1603568301114">
+    <state width="1557" height="231" key="GridCell.Tab.0.bottom" timestamp="1603572832475">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="262" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603568301114" />
+    <state width="1557" height="231" key="GridCell.Tab.0.bottom/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603572832475" />
     <state width="754" height="203" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
-    <state width="1557" height="262" key="GridCell.Tab.0.center" timestamp="1603568301114">
+    <state width="1557" height="231" key="GridCell.Tab.0.center" timestamp="1603572832475">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="262" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603568301114" />
+    <state width="1557" height="231" key="GridCell.Tab.0.center/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603572832475" />
     <state width="754" height="203" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
-    <state width="1557" height="262" key="GridCell.Tab.0.left" timestamp="1603568301114">
+    <state width="1557" height="231" key="GridCell.Tab.0.left" timestamp="1603572832475">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="262" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603568301114" />
+    <state width="1557" height="231" key="GridCell.Tab.0.left/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603572832475" />
     <state width="754" height="203" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
-    <state width="1557" height="262" key="GridCell.Tab.0.right" timestamp="1603568301114">
+    <state width="1557" height="231" key="GridCell.Tab.0.right" timestamp="1603572832475">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="262" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603568301114" />
+    <state width="1557" height="231" key="GridCell.Tab.0.right/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603572832475" />
     <state width="754" height="203" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1602542391964" />
     <state width="1557" height="253" key="GridCell.Tab.1.bottom" timestamp="1603563912621">
       <screen x="0" y="0" width="1600" height="860" />
@@ -205,6 +189,10 @@
     </state>
     <state x="476" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1601708063705" />
     <state x="476" y="254" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1602279333070" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1603571080426">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860/1600.0.1366.728@0.0.1600.860" timestamp="1603571080426" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
