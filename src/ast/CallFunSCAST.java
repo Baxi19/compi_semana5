@@ -2,12 +2,14 @@ package ast;
 
 import org.antlr.v4.runtime.Token;
 
-public class GroupPrimaryExpressionAST extends PrimaryExpressionAST {
+public class CallFunSCAST extends SingleCommandAST {
+    public Token IDENT;
     public Token PIZQ;
     public ExpressionAST expression;
     public Token PDER;
 
-    public GroupPrimaryExpressionAST(Token PIZQ, ExpressionAST expression, Token PDER) {
+    public CallFunSCAST(Token IDENT, Token PIZQ, ExpressionAST expression, Token PDER) {
+        this.IDENT = IDENT;
         this.PIZQ = PIZQ;
         this.expression = expression;
         this.PDER = PDER;
@@ -15,6 +17,6 @@ public class GroupPrimaryExpressionAST extends PrimaryExpressionAST {
 
     @Override
     public Object visit(Visitor v) {
-        return v.visitGroupPrimaryExpression(this);
+        return v.visitCallFunSC(this);
     }
 }

@@ -1,24 +1,16 @@
 package ast;
 
-import org.antlr.v4.runtime.CommonToken;
+import org.antlr.v4.runtime.Token;
 
-//Class NumPrimaryExpressionAST
 public class NumPrimaryExpressionAST extends PrimaryExpressionAST {
-    private CommonToken literal;
+    public Token NUM;
 
-    //Constructor
-    public NumPrimaryExpressionAST(CommonToken literal) {
-        this.literal = literal;
+    public NumPrimaryExpressionAST(Token NUM) {
+        this.NUM = NUM;
     }
 
-    //Getter
-    public CommonToken getLiteral() {
-        return literal;
-    }
-
-    //AST Method
     @Override
-    public Object visit(Visitor visitor) {
-        return visitor.visitNumPrimaryExpressionAST(this);
+    public Object visit(Visitor v) {
+        return v.visitNumPrimaryExpression(this);
     }
 }

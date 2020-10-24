@@ -1,34 +1,38 @@
 package ast;
 
+import org.antlr.v4.runtime.Token;
+
 import java.util.ArrayList;
 
 //Class CommandAST
-public class CommandAST extends  AST {
-    private SingleCommandAST singleCommand;
-    private ArrayList<SingleCommandAST> singleCommandList ;
+public class CommandAST extends AST {
+    public SingleCommandAST singleCommand;
+    public ArrayList<Token> pyCommas;
+    public ArrayList<SingleCommandAST> singleCommands;
 
     //Constructor
     public CommandAST(SingleCommandAST singleCommand) {
         this.singleCommand = singleCommand;
-        this.singleCommandList = new ArrayList<>();
+        this.pyCommas = new ArrayList<>();
+        this.singleCommands = new ArrayList<>();
     }
 
-    //Getters
+    //Getter
     public SingleCommandAST getSingleCommand() {
         return singleCommand;
     }
 
-    public SingleCommandAST getSingleCommand(int i) {
-        return singleCommandList.get(i);
+    public ArrayList<Token> getPyCommas() {
+        return pyCommas;
     }
 
-    public ArrayList<SingleCommandAST> getSingleCommandList() {
-        return singleCommandList;
+    public ArrayList<SingleCommandAST> getSingleCommands() {
+        return singleCommands;
     }
 
     //AST Method
     @Override
     public Object visit(Visitor visitor) {
-        return visitor.visitCommandAST(this);
+        return visitor.visitCommand(this);
     }
 }

@@ -1,40 +1,25 @@
-import ast.AST;
-import ast.ProgramAST;
+import ast.*;
 import generated.Scanner;
-import org.antlr.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
+import parser.Parser;
 
-import javax.swing.*;
-
+//Class Main
 public class main {
     public static void main(String[] args) {
-        Scanner inst = null;
+        Scanner scanner = null;
         CharStream input = null;
+        CommonTokenStream tokens = null;
+        AST tree;
+
         try {
             input = CharStreams.fromFileName("test.txt");
-            inst = new generated.Scanner(input);
-            MyParser p = new MyParser(inst);
-            try {
-                AST raiz = p.parse();
-                //PrintAST print = new PrintAST();
-                //raiz.visit(print);
-
-                //Show Parser Errors
-                int size = p.errors.size();
-                if(size > 0){
-                    System.out.println("Compilation: Failed");
-                    for (int i = 0; i < size; i++) {
-                        System.out.println((i+1) +") " +  p.errors.get(i));
-                    }
-                }
-                else{
-                    System.out.println("Compilation: Successful");
-                }
-
-            }catch (Exception e){
-                System.out.println("Compilation: Failed => " + e);
-            };
+            scanner = new generated.Scanner(input);
+            Parser parser = new Parser(scanner);
+            tree = parser.parse();
+            tree.visit(new PrintAST());
+            System.out.println("Compilation: Successful");
         }catch(Exception e){
             System.out.println("The file doesn't exist!");
             e.printStackTrace();

@@ -1,35 +1,22 @@
 package ast;
 
+import org.antlr.v4.runtime.Token;
+
 import java.util.ArrayList;
 
-//Class DeclarationAST
-public class DeclarationAST extends AST{
-    private SingleDeclarationAST singleDeclaration;
-    private ArrayList<SingleDeclarationAST> singleDeclarationList ;
+public class DeclarationAST extends AST {
+    public SingleDeclarationAST singleDeclaration;
+    public ArrayList<Token> pyCommas;
+    public ArrayList<SingleDeclarationAST> singleDeclarations;
 
-    //Constructor
-
-    public DeclarationAST(SingleDeclarationAST singleDeclaration) {
+    public DeclarationAST(SingleDeclarationAST singleDeclaration, ArrayList<Token> pyCommas, ArrayList<SingleDeclarationAST> singleDeclarations) {
         this.singleDeclaration = singleDeclaration;
-        this.singleDeclarationList = new ArrayList<>();
+        this.pyCommas = pyCommas;
+        this.singleDeclarations = singleDeclarations;
     }
 
-    //Getter
-    public SingleDeclarationAST getSingleDeclaration() {
-        return singleDeclaration;
-    }
-
-    public SingleDeclarationAST getSingleDeclaration(int i) {
-        return singleDeclarationList.get(i);
-    }
-
-    public ArrayList<SingleDeclarationAST> getSingleDeclarationList() {
-        return singleDeclarationList;
-    }
-
-    //AST Method
     @Override
-    public Object visit(Visitor visitor) {
-        return visitor.visitDeclarationAST(this);
+    public Object visit(Visitor v) {
+        return v.visitDeclaration(this);
     }
 }

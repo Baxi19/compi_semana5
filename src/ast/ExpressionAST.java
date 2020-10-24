@@ -1,42 +1,20 @@
 package ast;
 
-import org.antlr.v4.runtime.CommonToken;
-
 import java.util.ArrayList;
 
-//Class ExpressionAST
-public class ExpressionAST extends AST{
-    private PrimaryExpressionAST primaryExpression;
-    private ArrayList<CommonToken> operatorList;
-    private ArrayList<PrimaryExpressionAST> primaryExpressionList;
+public class ExpressionAST extends AST {
+    public PrimaryExpressionAST primaryExpression;
+    public ArrayList<OperatorAST> operators;
+    public ArrayList<PrimaryExpressionAST> primaryExpressions;
 
-    //Constructor
-    public ExpressionAST(PrimaryExpressionAST primaryExpression) {
+    public ExpressionAST(PrimaryExpressionAST primaryExpression, ArrayList<OperatorAST> operators, ArrayList<PrimaryExpressionAST> primaryExpressions) {
         this.primaryExpression = primaryExpression;
-        operatorList = new ArrayList<>();
-        this.primaryExpressionList = new ArrayList<>();
+        this.operators = operators;
+        this.primaryExpressions = primaryExpressions;
     }
 
-    //Getter
-    public PrimaryExpressionAST getPrimaryExpression() {
-        return primaryExpression;
-    }
-
-    public PrimaryExpressionAST getPrimaryExpression(int i) {
-        return primaryExpressionList.get(i);
-    }
-
-    public ArrayList<CommonToken> getOperatorList() {
-        return operatorList;
-    }
-
-    public ArrayList<PrimaryExpressionAST> getPrimaryExpressionList() {
-        return primaryExpressionList;
-    }
-
-    //AST Method
     @Override
-    public Object visit(Visitor visitor) {
-        return visitor.visitExpressionAST(this);
+    public Object visit(Visitor v) {
+        return v.visitExpression(this);
     }
 }
